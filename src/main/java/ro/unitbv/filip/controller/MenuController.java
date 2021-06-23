@@ -12,10 +12,12 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import ro.unitbv.filip.model.Car;
 import ro.unitbv.filip.model.CarDAO;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -102,23 +104,40 @@ public class MenuController implements Initializable {
         Scene scene = new Scene(root);
         dialogStage.setScene(scene);
         dialogStage.show();
+
+
     }
 
     @FXML
-    public void add(ActionEvent event) {
-        Car car = new Car();
-        car.setCarBrand("Test");
-        car.setCarModel("ModelTest");
-        car.setOwnerId(1);
-        car.setRegistrationPlate("BV-09-LSC");
-        CarDAO.getInstance().add(car);
+    public void add(ActionEvent event){
+        try{
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/AddMe.fxml"));
+            Parent root = (Parent)loader.load();
+            AddMeController addMeController= (AddMeController) loader.getController();
+            addMeController.setLoggedUserId(getUserId());
+            Stage stage=new Stage();
+            stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Icon2.png")));
+            stage.setScene(new Scene(root));
+            stage.show();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
-        refresh(event);
+
+
+
+//        AddMeController addMeController= (AddMeController) loader.getController();
+//        addMeController.setLoggedUserId(getUserId());
+//
+//        addMeController.addCar();
+//        Scene scene = new Scene(root);
+//        dialogStage.setScene(scene);
+//        dialogStage.show();
     }
 
     @FXML
     public void delete(ActionEvent event) {
-        // todo check if empty deleteRegistrationPlate
+        // TODO: check if empty deleteRegistrationPlate
         if (deleteRegistrationPlate.getText() == null ||
                 deleteRegistrationPlate.getText().length() == 0) {
 

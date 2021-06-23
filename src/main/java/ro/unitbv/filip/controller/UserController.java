@@ -30,6 +30,7 @@ public class UserController implements Initializable {
     @FXML
     private PasswordField textPassword;
 
+
     Stage dialogStage = new Stage();
     Scene scene;
 
@@ -37,6 +38,8 @@ public class UserController implements Initializable {
     public UserController(){
 
     }
+
+
 
     @FXML
     private void handleLoginButtonAction(ActionEvent event) {

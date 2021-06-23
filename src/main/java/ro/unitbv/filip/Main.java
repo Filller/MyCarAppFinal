@@ -20,10 +20,10 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/Login.fxml")));
         Scene scene = new Scene(root);
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("/images/Icon.png")));
         stage.setScene(scene);
         stage.show();
 
-        stage.getIcons().add(new Image(getClass().getResourceAsStream("/resources/images/Icon.png")));
     }
 
     public static void main(String[] args) {
