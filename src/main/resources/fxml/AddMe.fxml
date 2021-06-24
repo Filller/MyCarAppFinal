@@ -5,10 +5,13 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.unitbv.filip.controller.AddMeController">
 
-    <TextField fx:id="newCarRegistrationNumber" alignment="CENTER" layoutX="100.0" layoutY="65.0"  promptText="Car Registration Number" />
-    <TextField fx:id="newCarBrandName" alignment="CENTER" layoutX="100.0" layoutY="130.0"  promptText="Car Brand" />
-    <TextField fx:id="newCarModelName" alignment="CENTER" layoutX="100.0" layoutY="195.0"  promptText="Car Brand" />
-   <Button fx:id="addCarButton" layoutX="337.0" layoutY="130.0" mnemonicParsing="false" onAction="#addCar" text="Submit" />
+    <TextField fx:id="newCarRegistrationNumber" alignment="CENTER" layoutX="300.0" layoutY="67.0" promptText="Car Registration Number" />
+    <TextField fx:id="newCarBrandName" alignment="CENTER" layoutX="300.0" layoutY="130.0" promptText="Car Brand" />
+    <TextField fx:id="newCarModelName" alignment="CENTER" layoutX="300.0" layoutY="194.0" promptText="Car Model" />
+   <Button fx:id="addCarButton" layoutX="348.0" layoutY="274.0" mnemonicParsing="false" onAction="#addCar" text="Submit" />
+   <Label fx:id="L1" layoutX="118.0" layoutY="71.0" text="Car Registration Number" />
+   <Label layoutX="118.0" layoutY="134.0" text="Car Brand" />
+   <Label layoutX="118.0" layoutY="198.0" text="Car Model" />
 
 
 </AnchorPane>

@@ -6,11 +6,9 @@ import javafx.scene.control.Alert;
 import ro.unitbv.filip.model.Car;
 import ro.unitbv.filip.model.CarDAO;
 
-import java.awt.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.scene.control.TextField;
-import ro.unitbv.filip.model.User;
 
 public class AddMeController implements Initializable{
 

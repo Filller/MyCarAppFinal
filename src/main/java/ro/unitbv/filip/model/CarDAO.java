@@ -69,7 +69,5 @@ public class CarDAO {
         entityManager.flush();
 
         entityManager.getTransaction().commit();
-
     }
-
 }

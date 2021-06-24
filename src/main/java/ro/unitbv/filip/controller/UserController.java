@@ -75,8 +75,8 @@ public class UserController implements Initializable {
 
                     // Populate username
                     menuController.getLoggedInUser().setText(
-                            String.format("Logged-in User:%s",
-                                    loggedInUser.getUserName()));
+                            String.format("Hello User: " +
+                                    loggedInUser.getUserName())+ ", here are your cars");
 
                     // Show
                     scene = new Scene(root);

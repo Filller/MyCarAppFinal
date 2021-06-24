@@ -6,7 +6,7 @@
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.unitbv.filip.controller.MenuController">
 
     <children>
-        <TableView fx:id="carTable" layoutX="108.0" layoutY="59.0" prefHeight="206.0" prefWidth="352.0">
+        <TableView fx:id="carTable" layoutX="108.0" layoutY="59.0" prefHeight="206.0" prefWidth="288.0">
             <columns>
                 <TableColumn fx:id="tableRegistrationPlate" prefWidth="116.20001220703125" text="Registration Plate" />
                 <TableColumn fx:id="tableBrandColumn" prefWidth="96.39999389648438" text="Brand" />
@@ -15,11 +15,12 @@
             </columns>
         </TableView>
         <Label fx:id="loggedInUser" layoutX="28.0" layoutY="25.0" text="User " AnchorPane.bottomAnchor="357.4" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="25.00000000000002" />
-      <Button fx:id="showAll" layoutX="523.0" layoutY="21.0" mnemonicParsing="false" onAction="#refresh" text="Refresh" />
-      <Button fx:id="add" layoutX="523.0" layoutY="59.0" mnemonicParsing="false" onAction="#add" text="Add" />
-      <Button fx:id="delete" layoutX="525.0" layoutY="99.0" mnemonicParsing="false" onAction="#delete" text="Delete" />
-      <Button fx:id="logout" layoutX="525.0" layoutY="322.0" mnemonicParsing="false" onAction="#logout" text="Log Out" />
-        <TextField fx:id="deleteRegistrationPlate" layoutX="468.0" layoutY="149.0" prefHeight="26.0" prefWidth="145.0" />
+      <Button fx:id="showAll" layoutX="429.0" layoutY="59.0" mnemonicParsing="false" onAction="#refresh" text="Refresh" />
+      <Button fx:id="add" layoutX="429.0" layoutY="105.0" mnemonicParsing="false" onAction="#add" text="Add New Car" />
+      <Button fx:id="delete" layoutX="325.0" layoutY="335.0" mnemonicParsing="false" onAction="#delete" text="Delete" />
+      <Button fx:id="logout" layoutX="521.0" layoutY="21.0" mnemonicParsing="false" onAction="#logout" text="Log Out" />
+        <TextField fx:id="deleteRegistrationPlate" layoutX="132.0" layoutY="335.0" prefHeight="26.0" prefWidth="145.0" />
+      <Label layoutX="108.0" layoutY="306.0" prefHeight="17.0" prefWidth="305.0" text="Enter the registrastion plate of the car you wish to delete" />
 
 
     </children>
