@@ -32,6 +32,12 @@ public class UserDAO {
         return entityManager;
     }
 
+    /**
+     * Finds user in database based on the entered username
+     *
+     * @param name username to-be-logged-in
+     * @return List<user> a list containing the user with the entered username
+     */
     public List<User> findByName(String name){
         Query q = entityManager.createQuery("FROM " + User.class.getName() + " WHERE userName=:nm");
         q.setParameter("nm", name);

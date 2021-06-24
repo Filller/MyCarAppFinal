@@ -34,7 +34,11 @@ public class AddMeController implements Initializable{
     public AddMeController() {
     }
 
-
+    /**
+     * creates a car entity that will be added in the database
+     *
+     * TODO check if (and limit) the registration plate in already in the database
+     */
     public void addCar(){
         Car car = new Car();
         car.setCarBrand(newCarBrandName.getText().toString());
@@ -46,6 +50,9 @@ public class AddMeController implements Initializable{
 
     }
 
+    /**
+     * info-box logic
+     */
     public static void infoBox(String infoMessage, String titleBar, String headerMessage) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(titleBar);

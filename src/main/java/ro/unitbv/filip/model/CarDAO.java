@@ -46,6 +46,11 @@ public class CarDAO {
         return q.getResultList();
     }
 
+    /**
+     * This method deletes a car from the currently logged in user
+     *
+     * @param registrationPlate Registrastion plate of the to-be-removed car
+     */
     @Transactional
     public void deleteByRegistrationPlate(String registrationPlate) {
         entityManager.getTransaction().begin();
@@ -61,6 +66,11 @@ public class CarDAO {
 
     }
 
+    /**
+     * Adds a car to the database
+     *
+     * @param car The car that will be added
+     */
     @Transactional
     public void add(Car car) {
         entityManager.getTransaction().begin();

@@ -56,6 +56,11 @@ public class MenuController implements Initializable {
         this.carTable = carTable;
     }
 
+    /**
+     * clears and refreshes the car table either by button press or when called at the end of add and delete methods
+     *
+     * @param event refresh button press
+     */
     @FXML
     private void refresh(ActionEvent event) {
         List<Car> carList = CarDAO.getInstance().findByOwner(getUserId());
@@ -65,6 +70,12 @@ public class MenuController implements Initializable {
 
     }
 
+    /**
+     * initialises the car table
+     *
+     * @param location url of database
+     * @param resources
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         tableRegistrationPlate.setCellValueFactory(new PropertyValueFactory<Car, String>("registrationPlate"));
@@ -89,6 +100,12 @@ public class MenuController implements Initializable {
         this.loggedInUser = loggedInUser;
     }
 
+    /**
+     * login current user out, clearing the table as well as the user id;
+     *
+     * @param event logout button press
+     * @throws IOException
+     */
     @FXML
     public void logout(ActionEvent event) throws IOException {
         //Cleanup
@@ -108,6 +125,11 @@ public class MenuController implements Initializable {
 
     }
 
+    /**
+     * manages the setting of a new GUI window
+     *
+     * @param event add new car button press
+     */
     @FXML
     public void add(ActionEvent event){
         try{
@@ -124,8 +146,6 @@ public class MenuController implements Initializable {
         }
 
 
-
-
 //        AddMeController addMeController= (AddMeController) loader.getController();
 //        addMeController.setLoggedUserId(getUserId());
 //
@@ -135,9 +155,15 @@ public class MenuController implements Initializable {
 //        dialogStage.show();
     }
 
+    /**
+     * deletes user car by registration plate;
+     *
+     * @param event delete car button press
+     *
+     * TODO: check if empty deleteRegistrationPlate
+     */
     @FXML
     public void delete(ActionEvent event) {
-        // TODO: check if empty deleteRegistrationPlate
         if (deleteRegistrationPlate.getText() == null ||
                 deleteRegistrationPlate.getText().length() == 0) {
 

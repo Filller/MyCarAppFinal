@@ -92,6 +92,13 @@ public class UserController implements Initializable {
         }
     }
 
+    /**
+     * info-box logic
+     *
+     * @param infoMessage
+     * @param titleBar
+     * @param headerMessage
+     */
     public static void infoBox(String infoMessage, String titleBar, String headerMessage) {
         Alert alert = new Alert(AlertType.INFORMATION);
         alert.setTitle(titleBar);
